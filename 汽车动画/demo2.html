@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <title>Title</title>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/demo2.css">
+</head>
+<body>
+    <div class="show shu">
+        <img src="./img/bg_l.png" class="bg" alt="">
+        <div class="car">
+            <img src="img/car.png" alt="">
+            <img src="img/chelun.png" class="lunzi" alt="">
+            <img src="img/chelun.png" class="lunzi" alt="">
+        </div>
+        <div class="orz">
+            <img src="./img/one.png" alt="" class="im1 im fadeout">
+            <img src="./img/two.png" alt="" class="im2 im fadeout">
+            <img src="./img/three.png" alt="" class="im3 im fadeout">
+            <img src="./img/four.png" alt="" class="im4 im fadeout">
+            <img src="img/last_text.png" class="im5 im fadeout"/>
+        </div>
+        <img src="./img/go.png" alt="" class="go fadeOut">
+
+    </div>
+    <script>
+        var count;
+        $(function () {
+            if(window.innerWidth>window.innerHeight){
+                $('.show').removeClass('shu').addClass('heng');
+                count=5;
+            }else{
+                $('.show').removeClass('heng').addClass('shu');
+                count=1;
+            }
+            $('.lunzi').addClass('on');
+            $('.shu .car').css('top','0');
+            $('.heng .car').css('top','0');
+
+            $('.shu>.bg').animate({'top':'-100vh'},5000,function () {
+                $('.go').removeClass('fadeOut');
+                $('.lunzi').removeClass('on');
+                $('.im1').removeClass('fadeout');
+
+            });
+            $('.heng>.bg').animate({'top':'-100vw'},5000,function () {
+                $('.go').removeClass('fadeOut');
+                $('.lunzi').removeClass('on');
+                $('.im1').removeClass('fadeout');
+
+            });
+        });
+        $('.shu>.go').click(function(){
+            console.log(count);
+            $('.go').addClass('fadeOut');
+            switch(count){
+                case 1:
+                    $('.lunzi').addClass('on');
+                    $('.im1').addClass('fadeout');
+                    $('.bg').animate({'top':'-206vh'},4000,function () {
+                        $('.go').removeClass('fadeOut');
+                        $('.lunzi').removeClass('on');
+                        $('.im2').removeClass('fadeout');
+                    });
+                    break;
+                case 2:
+                    $('.lunzi').addClass('on');
+                    $('.im2').addClass('fadeout');
+                    $('.bg').animate({'top':'-320vh'},4000,function () {
+                        $('.lunzi').removeClass('on');
+                        $('.go').removeClass('fadeOut');
+                        $('.im3').removeClass('fadeout');
+                    });
+                    break;
+                case 3:
+                    $('.lunzi').addClass('on');
+                    $('.im3').addClass('fadeout');
+                    $('.bg').animate({'top':'-420vh'},4000,function () {
+                        $('.lunzi').removeClass('on');
+                        $('.go').removeClass('fadeOut');
+                        $('.car').css('top','30vh');
+                        $('.im4').removeClass('fadeout');
+                    });
+                    break;
+                case 4:
+                    $('.lunzi').addClass('on');
+                    $('.im4').addClass('fadeout');
+                    $('.bg').animate({'top':'-580vh'},4000,function () {
+                        $('.lunzi').removeClass('on');
+                        $('.go').css('display','none');
+                        $('.car').css({'top':'60vh'});
+                        $('.im5').removeClass('fadeout');
+
+                    });
+                    break;
+                case 5:
+                    $('.lunzi').addClass('on');
+                    $('.im1').addClass('fadeout');
+                    $('.bg').animate({'top':'-200vw'},4000,function () {
+                        console.log($('.go'));
+                        $('.go').removeClass('fadeOut');
+                        $('.lunzi').removeClass('on');
+                        $('.im2').removeClass('fadeout');
+
+                    });
+                    break;
+                case 6:
+                    $('.lunzi').addClass('on');
+                    $('.im2').addClass('fadeout');
+
+                    $('.bg').animate({'top':'-312vw'},4000,function () {
+                        $('.lunzi').removeClass('on');
+                        $('.go').removeClass('fadeOut');
+                        $('.im3').removeClass('fadeout');
+                    });
+                    break;
+                case 7:
+                    $('.lunzi').addClass('on');
+                    $('.im3').addClass('fadeout');
+                    $('.bg').animate({'top':'-418vw'},4000,function () {
+                        $('.go').removeClass('fadeOut');
+                        $('.car').animate({'top':'30vw'},function () {
+                            $('.lunzi').removeClass('on');
+                        });
+
+                        $('.im4').removeClass('fadeout');
+                    });
+                    break;
+                case 8:
+                    $('.lunzi').addClass('on');
+                    $('.im4').addClass('fadeout');
+                    $('.bg').animate({'top':'-580vw'},4000,function () {
+                        $('.lunzi').removeClass('on');
+                        $('.go').css('display','none');
+                        $('.car').css({'top':'60vw'});
+                        $('.im5').removeClass('fadeout');
+                    });
+                    break;
+
+
+
+            }
+            count++;
+        })
+        window.addEventListener("orientationchange",function () {
+            window.location.reload();
+            if(window.innerWidth>window.innerHeight ){
+
+                $(".show").removeClass('shu').addClass('heng');
+            }
+            else{
+
+                $(".show").removeClass('heng').addClass('shu');
+            }
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@keyframes rotat {
+  from{transform: rotate(0);}
+  to{transform: rotate(-360deg);}
+}
+body{
+  margin:0;
+  width:100vw;
+  height:100vh;
+  position: relative;
+  overflow: hidden;
+
+}
+.show{
+  position: relative;
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+  &.shu{
+    transform:rotate(0deg);
+    img{
+      position: absolute;
+      height:100%;
+      top:0;
+      &.txt2_img{
+        animation: rotat 8s infinite linear;
+        height:100vw;
+        top: 20vh;
+        left: -20vw;
+
+      }
+      &.txt3_img{
+        position: absolute;
+        z-index: 99;
+
+      }
+    }
+  }
+  &.heng{
+    width:100vh;
+    height:100vw;
+    top:100vh;
+    transform:rotate(-90deg);
+    transform-origin:top left;
+    img{
+      position: absolute;
+      height:100%;
+      left:0;
+      &.txt2_img{
+        animation: rotat 8s infinite linear;
+        width: 100vw;
+        left: -30vh;
+        top: 19vw;
+        height:auto;
+
+      }
+      &.txt3_img{
+
+
+      }
+    }
+  }
+
+}

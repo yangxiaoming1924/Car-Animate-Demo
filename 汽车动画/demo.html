@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width,initial-scale=1,maximum-scale=1″>
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <title>Title</title>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="show shu">
+        <img src="img/txt.png" class="txt1_img">
+        <img src="img/bg.png" class="txt2_img">
+        <a href="demo2.html">
+            <img src="img/fr.png" class="txt3_img">
+        </a>
+    </div>
+    <script>
+        if(window.innerWidth>window.innerHeight){
+            $('.show').removeClass('shu').addClass('heng');
+        }else{
+            $('.show').removeClass('heng').addClass('shu');
+        }
+        window.addEventListener("orientationchange",function () {
+            if(window.innerWidth>window.innerHeight ){
+
+                $(".show").removeClass('shu').addClass('heng');
+            }
+            else{
+
+                $(".show").removeClass('heng').addClass('shu');
+            }
+
+        })
+//        window.onload=function () {
+//            console.log(window.orientation)
+//        }
+
+    </script>
+</body>
+</html>

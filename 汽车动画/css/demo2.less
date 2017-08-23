@@ -1,0 +1,201 @@
+@keyframes rotat {
+  from{transform: rotate(0);}
+  to{transform: rotate(360deg);}
+}
+
+body{
+  margin:0;
+  width:100vw;
+  height:100vh;
+  position: relative;
+  overflow: hidden;
+
+}
+.show{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transform:rotate(0deg);
+  &.shu{
+    .bg{
+      position: absolute;
+      width: 100%;
+      height:680vh;
+      display: block;
+    }
+    .car{
+      position: absolute;
+      left:71px;
+      top:-10vh;
+      transition: all 2s;
+      img{
+        position: absolute;
+        &:nth-child(2){
+          top: 95px;
+          left: 124px;
+        }
+        &:nth-child(3){
+          top: 418px;
+          left: 124px;
+        }
+        &.lunzi.on{
+          animation: rotat 1s infinite linear;
+        }
+
+      }
+
+    }
+    .go{
+      position: absolute;
+      left: 5vw;
+      bottom: 4vh;
+
+      transition: all 1s ;
+      &.fadeOut{
+        opacity: 0;
+      }
+    }
+
+    .orz {
+      height: inherit;
+      width: inherit;
+      position: relative;
+      .im {
+        position: absolute;
+        transition: all 1s;
+        &.fadeout{
+          opacity:0;
+        }
+        &.im1 {
+          top: 57vh;
+          width: 92vw;
+        }
+        &.im2 {
+          top: 44vh;
+          right: 8vh;
+          width: 28vh;
+        }
+        &.im3 {
+          top: 44vh;
+          right: 8vh;
+          width: 28vh;
+        }
+        &.im4 {
+          top: 0;
+          right: 0;
+          margin:auto;
+          left:0;
+          bottom:0;
+          width: 52vh;
+        }
+        &.im5{
+          width: 36vh;
+          top: 10vh;
+        }
+
+      }
+    }
+
+
+
+  }
+  &.heng{
+    width: 100vh;
+    height: 100vw;
+    top:100vh;
+
+  transform:rotate(-90deg);
+  transform-origin:top left;
+    .bg{
+      position: absolute;
+      width: 100%;
+      height:680vw;
+      display: block;
+    }
+    .car{
+      position: absolute;
+      top:-60vw;
+      transition: all 2s;
+      img{
+        position: absolute;
+        &:first-child{
+          height:489vw;
+        }
+        &:nth-child(2){
+          top: 30vw;
+          left: 15vh;
+          height: 7vw;
+        }
+        &:nth-child(3){
+          top: 7vw;
+          left: 15vh;
+          height: 7vw;
+        }
+        &.lunzi.on{
+          animation: rotat 1s infinite linear;
+        }
+
+      }
+
+    }
+    .go{
+      position: absolute;
+      left: 5vh;
+      bottom: 4vw;
+      width:10vw;
+      transition: all 1s ;
+      &.fadeOut{
+        opacity: 0;
+      }
+    }
+    .orz{
+      height:inherit;
+      width:inherit;
+      position: relative;
+      .im{
+        position: absolute;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+        &.fadeout{
+          opacity:0;
+        }
+        &.im1{
+          bottom:0;
+          height:80vh;
+
+        }
+        &.im2{
+          right: 10vh;
+          bottom: 10vh;
+          height: 80vh;
+        }
+        &.im3{
+          right: 10vh;
+          bottom: 10vh;
+          height:80vh;
+        }
+        &.im4{
+          bottom:0;
+          top:0;
+          right:0;
+          left:0;
+          margin:auto;
+          height:80vw;
+        }
+        &.im5{
+          top: 10vh;
+          left: 0;
+          height: 54vw;
+        }
+
+      }
+    }
+
+  }
+
+
+}

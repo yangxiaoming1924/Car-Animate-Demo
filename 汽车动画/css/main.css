@@ -1,0 +1,58 @@
+@keyframes rotat {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.show {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.show.shu {
+  transform: rotate(0deg);
+}
+.show.shu img {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+.show.shu img.txt2_img {
+  animation: rotat 8s infinite linear;
+  height: 100vw;
+  top: 20vh;
+  left: -20vw;
+}
+.show.shu img.txt3_img {
+  position: absolute;
+  z-index: 99;
+}
+.show.heng {
+  width: 100vh;
+  height: 100vw;
+  top: 100vh;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+.show.heng img {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+.show.heng img.txt2_img {
+  animation: rotat 8s infinite linear;
+  width: 100vw;
+  left: -30vh;
+  top: 19vw;
+  height: auto;
+}

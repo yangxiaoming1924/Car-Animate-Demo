@@ -1,0 +1,185 @@
+@keyframes rotat {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.show {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transform: rotate(0deg);
+}
+.show.shu .bg {
+  position: absolute;
+  width: 100%;
+  height: 680vh;
+  display: block;
+}
+.show.shu .car {
+  position: absolute;
+  left: 71px;
+  top: -10vh;
+  transition: all 2s;
+}
+.show.shu .car img {
+  position: absolute;
+}
+.show.shu .car img:nth-child(2) {
+  top: 95px;
+  left: 124px;
+}
+.show.shu .car img:nth-child(3) {
+  top: 418px;
+  left: 124px;
+}
+.show.shu .car img.lunzi.on {
+  animation: rotat 1s infinite linear;
+}
+.show.shu .go {
+  position: absolute;
+  left: 5vw;
+  bottom: 4vh;
+  transition: all 1s ;
+}
+.show.shu .go.fadeOut {
+  opacity: 0;
+}
+.show.shu .orz {
+  height: inherit;
+  width: inherit;
+  position: relative;
+}
+.show.shu .orz .im {
+  position: absolute;
+  transition: all 1s;
+}
+.show.shu .orz .im.fadeout {
+  opacity: 0;
+}
+.show.shu .orz .im.im1 {
+  top: 57vh;
+  width: 92vw;
+}
+.show.shu .orz .im.im2 {
+  top: 44vh;
+  right: 8vh;
+  width: 28vh;
+}
+.show.shu .orz .im.im3 {
+  top: 44vh;
+  right: 8vh;
+  width: 28vh;
+}
+.show.shu .orz .im.im4 {
+  top: 0;
+  right: 0;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  width: 52vh;
+}
+.show.shu .orz .im.im5 {
+  width: 36vh;
+  top: 10vh;
+}
+.show.heng {
+  width: 100vh;
+  height: 100vw;
+  top: 100vh;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+.show.heng .bg {
+  position: absolute;
+  width: 100%;
+  height: 680vw;
+  display: block;
+}
+.show.heng .car {
+  position: absolute;
+  top: -60vw;
+  transition: all 2s;
+}
+.show.heng .car img {
+  position: absolute;
+}
+.show.heng .car img:first-child {
+  height: 489vw;
+}
+.show.heng .car img:nth-child(2) {
+  top: 30vw;
+  left: 15vh;
+  height: 7vw;
+}
+.show.heng .car img:nth-child(3) {
+  top: 7vw;
+  left: 15vh;
+  height: 7vw;
+}
+.show.heng .car img.lunzi.on {
+  animation: rotat 1s infinite linear;
+}
+.show.heng .go {
+  position: absolute;
+  left: 5vh;
+  bottom: 4vw;
+  width: 10vw;
+  transition: all 1s ;
+}
+.show.heng .go.fadeOut {
+  opacity: 0;
+}
+.show.heng .orz {
+  height: inherit;
+  width: inherit;
+  position: relative;
+}
+.show.heng .orz .im {
+  position: absolute;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.show.heng .orz .im.fadeout {
+  opacity: 0;
+}
+.show.heng .orz .im.im1 {
+  bottom: 0;
+  height: 80vh;
+}
+.show.heng .orz .im.im2 {
+  right: 10vh;
+  bottom: 10vh;
+  height: 80vh;
+}
+.show.heng .orz .im.im3 {
+  right: 10vh;
+  bottom: 10vh;
+  height: 80vh;
+}
+.show.heng .orz .im.im4 {
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 80vw;
+}
+.show.heng .orz .im.im5 {
+  top: 10vh;
+  left: 0;
+  height: 54vw;
+}
